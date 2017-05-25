@@ -13,7 +13,7 @@ public class Neo4JControl {
 	private void init() {
 		driver = GraphDatabase.driver(
                         "bolt://localhost", 
-                        AuthTokens.basic("neo4j", "kasper1277"));
+                        AuthTokens.basic("neo4j", "neo4j"));
 		session = driver.session();
 
 	}

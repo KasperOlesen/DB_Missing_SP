@@ -8,8 +8,8 @@
 <hr>
 <br>
 <b>Issues:</b>
-<p>I have not managed to import the edges into the MySQL table.</p>
-<p>I have tried both to used a query and by using the Table Data Import wizard in the workbench</p>
+<p>The import of nodes into MySQL went fine, but I have not managed to import the edges into the MySQL table.</p>
+<p>I have tried both to use a query and by using the Table Data Import wizard in the workbench</p>
 <p>I have created the tables like this:</p>
 CREATE TABLE T_USER(<br>
 id int NOT NULL, <br>
@@ -38,7 +38,7 @@ IGNORE 1 LINES <br>
 (ENDORSED,ENDORSER) <br>
 ;
 
-<p>But even though I let it work for +1 hour, it just sits there. So its either crashing at some point or really slow</p>
+<p>But even though I let it work for +1 hour, it just sits there while "Importing data file". So its either crashing at some point or really slow</p>
 <p>Even though the import of data didnt work, I have implemented the solutions for the MySQL DB. I just dont have the data.</p>
 <p>I will update this repo if i find a solution</p>
 

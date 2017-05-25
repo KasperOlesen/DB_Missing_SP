@@ -40,6 +40,8 @@ IGNORE 1 LINES <br>
 
 <p>But even though I let it work for +1 hour, it just sits there while "Importing data file". So its either crashing at some point or really slow</p>
 <p>Even though the import of data didnt work, I have implemented the solutions for the MySQL DB. I just dont have the data.</p>
+<p>I importin data from the small.csv file instead, and even though my queries work in the workbench, the java code only prints 0.0</p>
+
 <p>I will update this repo if i find a solution</p>
 
 

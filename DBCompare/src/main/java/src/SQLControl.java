@@ -12,14 +12,14 @@ import java.sql.SQLException;
 public class SQLControl {
     
     Connection con = null;
-    String url = "jdbc:mysql://localhost:3306/sqlcompare";
+    String url = "jdbc:mysql://localhost:3306/comparesql";
     String user = "root";
-    String password = "centriNo100";
+    String password = "password";
 
     public ResultSet getEndorsesDepthOne(int id) {
         String query = "SELECT NAME "
-                    + "FROM t_user "
-                    + "WHERE t_user.ID IN "
+                    + "FROM T_USER "
+                    + "WHERE T_USER.ID IN "
                         + "(SELECT ENDORSED "
                         + "FROM T_ENDORSEMENTS "
                         + "WHERE ENDORSER = " + id + ")";
@@ -40,8 +40,8 @@ public class SQLControl {
 
     public ResultSet getEndorsesDepthTwo(int id) {
         String query = "SELECT NAME "
-                    + "FROM t_user "
-                    + "WHERE t_user.ID IN "
+                    + "FROM T_USER "
+                    + "WHERE T_USER.ID IN "
                         + "(SELECT ENDORSED "
                         + "FROM ENDORSER IN "
                             + "(SELECT ENDORSED "
@@ -64,8 +64,8 @@ public class SQLControl {
 
     public ResultSet getEndorsesDepthThree(int id) {
         String query = "SELECT NAME "
-                    + "FROM t_user "
-                    + "WHERE t_user.ID IN "
+                    + "FROM T_USER "
+                    + "WHERE T_USER.ID IN "
                         + "(SELECT ENDORSED "
                         + "FROM ENDORSER IN "
                             + "(SELECT ENDORSED "
@@ -91,8 +91,8 @@ public class SQLControl {
 
     public ResultSet getEndorsesDepthFour(int id) {
         String query = "SELECT NAME "
-                    + "FROM t_user "
-                    + "WHERE t_user.ID IN "
+                    + "FROM T_USER "
+                    + "WHERE T_USER.ID IN "
                         + "(SELECT ENDORSED "
                         + "FROM ENDORSER IN "
                             + "(SELECT ENDORSED "
@@ -121,8 +121,8 @@ public class SQLControl {
 
     public ResultSet getEndorsesDepthFive(int id) {
         String query = "SELECT NAME "
-                    + "FROM t_user "
-                    + "WHERE t_user.ID IN "
+                    + "FROM T_USER "
+                    + "WHERE T_USER.ID IN "
                         + "(SELECT ENDORSED "
                         + "FROM ENDORSER IN "
                             + "(SELECT ENDORSED "
